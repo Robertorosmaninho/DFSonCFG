@@ -58,9 +58,6 @@ std::queue<BasicBlock*> DepthFirstSearch::get_DFS(){
 }
 
 bool DepthFirstSearch::runOnFunction(Function &F){
-  errs() << "=============================\n";
-  errs() << "FunctionName: " << F.getName() << "\n"; 
-
   BasicBlock* BB = &F.getEntryBlock();
   this->reset_visited(F);
   this->addBasicBlock(BB); 
